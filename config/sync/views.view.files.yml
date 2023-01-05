@@ -621,6 +621,55 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        uri:
+          id: uri
+          table: file_managed
+          field: uri
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: file
+          entity_field: uri
+          plugin_id: string
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: uri_op
+            label: URI
+            description: null
+            use_operator: false
+            operator: uri_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: uri
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: Filesystem
+            description: ''
+            identifier: uri_prefix
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Fedora
+                operator: starts
+                value: 'fedora://'
+              2:
+                title: Public
+                operator: starts
+                value: 'public://'
       style:
         type: table
         options:

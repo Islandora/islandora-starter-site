@@ -6,9 +6,6 @@ dependencies:
     - file
     - rest
     - serialization
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: S3AUYxL0a-o7SIH5qZNSJ-JEA7IcVMt29QyFeUWmxGs
 id: file_checksum

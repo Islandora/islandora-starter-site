@@ -5,9 +5,6 @@ dependencies:
   config:
     - field.storage.media.field_media_of
     - media.type.audio
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: InUFyVlpxFYVY-YhhapTUcRhFN2ckUDTH37xpa3Gs2M
 id: media.audio.field_media_of

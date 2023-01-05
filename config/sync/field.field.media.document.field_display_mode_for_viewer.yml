@@ -1,0 +1,24 @@
+uuid: f10721f2-19b2-4109-a40e-c8fab7677428
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.pdfjs
+    - field.storage.media.field_display_mode_for_viewer
+    - media.type.document
+  module:
+    - view_mode_switch
+id: media.document.field_display_mode_for_viewer
+field_name: field_display_mode_for_viewer
+entity_type: media
+bundle: document
+label: 'Display Mode for Viewer'
+description: 'If this media should be displayed in an alternate viewer than set in the "Source" view mode, select it here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_view_modes:
+    pdfjs: pdfjs
+field_type: view_mode_switch

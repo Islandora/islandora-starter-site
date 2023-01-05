@@ -1,0 +1,55 @@
+uuid: f1131ce4-e562-46ae-b9ba-3f7463e9a123
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.resource_type_2
+  module:
+    - context
+    - facets
+    - islandora
+    - system
+  theme:
+    - olivero
+id: resourcetype_2
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'facet_block:resource_type_2'
+settings:
+  id: 'facet_block:resource_type_2'
+  label: 'Resource Type'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: resourcetype_2
+visibility:
+  context:
+    id: context
+    negate: null
+    values: ''
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*/search'

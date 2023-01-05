@@ -4,9 +4,6 @@ status: true
 dependencies:
   module:
     - islandora
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: 0B7OiLQjFhZXcas_HOMqgt-3eSVv186aLAQCc3zEmXA
 id: index_taxonomy_term_in_fedora

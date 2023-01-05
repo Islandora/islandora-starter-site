@@ -4,9 +4,6 @@ status: true
 dependencies:
   module:
     - islandora
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: pEkoKmhz52Kq8xEaF4QRvFgJuo178dYLq0OEtxmibtU
 id: delete_taxonomy_term_in_triplestore

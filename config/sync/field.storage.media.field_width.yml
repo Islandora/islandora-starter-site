@@ -4,9 +4,6 @@ status: true
 dependencies:
   module:
     - media
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: zL-l_IiMrXgUkI928ssjw2n77FjbeVqehzdJ9_koIYk
 id: media.field_width

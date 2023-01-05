@@ -15,7 +15,6 @@ dependencies:
     - field.field.node.islandora_object.field_date_valid
     - field.field.node.islandora_object.field_description
     - field.field.node.islandora_object.field_dewey_classification
-    - field.field.node.islandora_object.field_display_hints
     - field.field.node.islandora_object.field_edition
     - field.field.node.islandora_object.field_edtf_date
     - field.field.node.islandora_object.field_edtf_date_created
@@ -50,6 +49,8 @@ dependencies:
     - field.field.node.islandora_object.field_weight
     - node.type.islandora_object
   module:
+    - controlled_access_terms
+    - search_api_solr
     - user
 _core:
   default_config_hash: JknApCSkcV3PzfTMK_yhbY65o6sBHvjIs5J6dJF2YI0
@@ -58,31 +59,67 @@ targetEntityType: node
 bundle: islandora_object
 mode: teaser
 content:
-  display_media_thumbnail:
+  display_media_entity_view_3:
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
-  field_gemini_uri:
+  field_abstract:
+    type: solr_highlighted_text_default
+    label: inline
+    settings:
+      prefix: '<strong>'
+      suffix: '</strong>'
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_description:
+    type: basic_string
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 4
+    region: content
+  field_linked_agent:
+    type: typed_relation_default
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_member_of:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_model:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
     region: content
   islandora_fits_checksum:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 6
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden:
   display_media_entity_view_1: true
   display_media_entity_view_2: true
+  display_media_original_download: true
   display_media_service_file: true
-  field_abstract: true
+  display_media_thumbnail: true
   field_alt_title: true
   field_classification: true
   field_coordinates: true
@@ -91,9 +128,7 @@ hidden:
   field_date_captured: true
   field_date_modified: true
   field_date_valid: true
-  field_description: true
   field_dewey_classification: true
-  field_display_hints: true
   field_edition: true
   field_edtf_date: true
   field_edtf_date_created: true
@@ -101,17 +136,15 @@ hidden:
   field_extent: true
   field_frequency: true
   field_full_title: true
+  field_gemini_uri: true
   field_genre: true
   field_geographic_subject: true
   field_identifier: true
   field_isbn: true
   field_language: true
   field_lcc_classification: true
-  field_linked_agent: true
   field_local_identifier: true
-  field_member_of: true
   field_mode_of_issuance: true
-  field_model: true
   field_note: true
   field_oclc_number: true
   field_physical_form: true
@@ -135,3 +168,4 @@ hidden:
   pdfjs_media_evas_entity_view_2: true
   pdfjs_media_evas_service_file: true
   search_api_excerpt: true
+  search_within_this_collection_link_entity_view_1: true

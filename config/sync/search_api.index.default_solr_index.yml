@@ -4,10 +4,11 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_alt_title
-    - field.storage.node.field_edtf_date_created
+    - field.storage.node.field_member_of
     - field.storage.node.field_description
     - field.storage.node.field_dewey_classification
     - field.storage.node.field_edition
+    - field.storage.node.field_edtf_date_created
     - field.storage.node.field_extent
     - field.storage.node.field_full_title
     - field.storage.node.field_isbn
@@ -17,12 +18,12 @@ dependencies:
     - field.storage.node.field_physical_form
     - field.storage.node.field_resource_type
     - field.storage.node.field_rights
+    - field.storage.node.field_tags
     - field.storage.node.field_subject_general
     - field.storage.node.field_geographic_subject
     - field.storage.node.field_subjects_name
     - field.storage.node.field_temporal_subject
     - field.storage.node.field_subject
-    - field.storage.node.field_tags
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
   module:
@@ -31,6 +32,7 @@ dependencies:
     - user
     - taxonomy
     - search_api
+    - controlled_access_terms
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -55,6 +57,8 @@ third_party_settings:
       index_prefix: ''
     multilingual:
       specific_languages: {  }
+      use_language_undefined_as_fallback_language: false
+      use_universal_collation: false
 _core:
   default_config_hash: 3HSYR81fyYsY--a93ZG1VSN3PEHVN_o78qIhDfsxzs4
 id: default_solr_index
@@ -87,6 +91,10 @@ field_settings:
     dependencies:
       module:
         - node
+  edtf_year:
+    label: 'EDTF Creation Date Year'
+    property_path: edtf_year
+    type: integer
   field_alt_title:
     label: 'Alternative Title'
     datasource_id: 'entity:node'
@@ -95,6 +103,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_alt_title
+  field_descendant_of:
+    label: 'Descendant of'
+    datasource_id: 'entity:node'
+    property_path: field_member_of
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_member_of
   field_description:
     label: Description
     datasource_id: 'entity:node'
@@ -218,6 +234,16 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_tags
+  member_of_title:
+    label: 'Member of » Content » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_member_of:entity:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_member_of
+      module:
+        - node
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -374,10 +400,40 @@ processor_settings:
     weights:
       preprocess_index: -6
       preprocess_query: -4
+  edtf_year_only:
+    fields:
+      islandora_object|field_copyright_date: islandora_object|field_copyright_date
+      islandora_object|field_edtf_date: islandora_object|field_edtf_date
+      islandora_object|field_edtf_date_created: islandora_object|field_edtf_date_created
+      islandora_object|field_edtf_date_issued: islandora_object|field_edtf_date_issued
+    ignore_undated: 1
+    ignore_open_start: 0
+    open_start_year: '0'
+    ignore_open_end: 0
+    open_end_year: ''
   entity_status:
     weights:
       preprocess_index: -10
   entity_type: {  }
+  hierarchy:
+    weights:
+      preprocess_index: -45
+    fields:
+      field_descendant_of: node-field_member_of
+  highlight:
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
+    excerpt: true
+    excerpt_always: true
+    excerpt_length: 256
+    exclude_fields:
+      - field_description
+      - field_full_title
+      - title
+    highlight: always
+    highlight_partial: true
   html_filter:
     weights:
       preprocess_index: -3

@@ -8,9 +8,6 @@ dependencies:
     - rest
     - serialization
     - user
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: Zwu8JUsBiYaxPko_9DbJJhA-ZZSGOm81I9XtT9NH3M4
 id: manage_members

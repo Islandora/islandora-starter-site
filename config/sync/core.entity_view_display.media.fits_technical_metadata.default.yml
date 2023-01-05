@@ -13,9 +13,6 @@ dependencies:
     - media.type.fits_technical_metadata
   module:
     - islandora_fits
-  enforced:
-    module:
-      - islandora_fits
 _core:
   default_config_hash: eQIgNGtw_hfVQxGPLc_JeBC1l1whFSoMsEYYNx0vOv4
 id: media.fits_technical_metadata.default

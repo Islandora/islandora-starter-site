@@ -14,9 +14,6 @@ dependencies:
     - media.type.video
   module:
     - islandora_video
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: h5fVMfcI16Wt4zPnxik3f0JdSLeiSlk4h3a8IRBSa8w
 id: media.video.source
@@ -33,13 +30,13 @@ content:
     type: islandora_file_video
     label: visually_hidden
     settings:
-      muted: false
-      width: 640
-      height: 480
       controls: true
       autoplay: false
       loop: false
       multiple_file_display_type: tags
+      muted: false
+      width: 640
+      height: 480
     third_party_settings: {  }
     weight: 0
     region: content

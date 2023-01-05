@@ -9,9 +9,6 @@ dependencies:
     - serialization
     - taxonomy
     - user
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: G3Adl8KEMsW0Y2f3ZXb1DDDRci7206hfMWMUGCG2KQQ
 id: entity.taxonomy_term

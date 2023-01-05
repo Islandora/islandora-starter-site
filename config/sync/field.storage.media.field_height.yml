@@ -4,9 +4,6 @@ status: true
 dependencies:
   module:
     - media
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: Px3XXVJbHRnXONsekdr0c4_ZbfiwtElQTJbtR-zwsm8
 id: media.field_height

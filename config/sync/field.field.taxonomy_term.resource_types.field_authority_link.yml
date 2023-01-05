@@ -23,6 +23,7 @@ settings:
   authority_sources:
     dcmi_types: 'DCMI Type Vocabulary'
     marc_resource_types: 'MARC Resource Types'
+    bibo: 'Bibliographic Ontology'
     other: Other
   title: 1
   link_type: 16

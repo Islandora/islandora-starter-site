@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.file.field_display_mode_for_viewer
     - field.field.media.file.field_file_size
     - field.field.media.file.field_media_file
     - field.field.media.file.field_media_of
@@ -26,12 +27,12 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 3
+    weight: 5
     region: content
   field_gemini_uri:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 6
     region: content
   field_media_file:
     type: file_default
@@ -55,7 +56,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 5
+    weight: 3
     region: content
   field_mime_type:
     type: string
@@ -70,7 +71,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 7
     region: content
   name:
     type: string
@@ -82,6 +83,7 @@ content:
     region: content
 hidden:
   created: true
+  field_display_mode_for_viewer: true
   langcode: true
   search_api_excerpt: true
   thumbnail: true

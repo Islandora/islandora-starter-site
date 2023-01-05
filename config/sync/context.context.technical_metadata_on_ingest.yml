@@ -4,15 +4,12 @@ status: true
 dependencies:
   module:
     - islandora
-  enforced:
-    module:
-      - islandora_fits
 _core:
   default_config_hash: XtBYoGhM0h6E6KN_OfmCVMN8ey6inC6fdogp7FuSQPE
-label: 'Technical Metadata on Ingest'
+label: 'FITS derivatives'
 name: technical_metadata_on_ingest
-group: Islandora
-description: 'Defines FITS harvesting behavior'
+group: Derivatives
+description: 'FITS derivatives for all original files'
 requireAllConditions: false
 disabled: false
 conditions:
@@ -27,7 +24,7 @@ conditions:
 reactions:
   derivative:
     id: derivative
+    saved: false
     actions:
       generate_a_technical_metadata_derivative: generate_a_technical_metadata_derivative
-    saved: false
 weight: 0

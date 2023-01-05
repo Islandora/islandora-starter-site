@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.pdfjs
+    - field.field.media.file.field_display_mode_for_viewer
     - field.field.media.file.field_file_size
     - field.field.media.file.field_media_file
     - field.field.media.file.field_media_of
@@ -36,6 +37,7 @@ content:
     region: content
 hidden:
   created: true
+  field_display_mode_for_viewer: true
   field_file_size: true
   field_gemini_uri: true
   field_media_of: true

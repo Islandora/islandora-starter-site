@@ -5,9 +5,6 @@ dependencies:
   config:
     - field.storage.media.field_height
     - media.type.image
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: 4LhgCjcEdM8QcjuC0rtzHHhL34Dn_VZ_kfPT3Hf_ttk
 id: media.image.field_height

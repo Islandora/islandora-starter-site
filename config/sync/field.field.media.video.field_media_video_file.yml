@@ -7,9 +7,6 @@ dependencies:
     - media.type.video
   module:
     - file
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: aVsH94glMbKDyF_GDPdx83nXIjQmnd9chf7vHN1ApGc
 id: media.video.field_media_video_file

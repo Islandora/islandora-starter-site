@@ -71,36 +71,6 @@ content:
   links:
     weight: 100
     region: content
-  openseadragon_media_evas_entity_view_1:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  openseadragon_media_evas_entity_view_2:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  openseadragon_media_evas_service_file:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  pdfjs_media_evas_entity_view_1:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  pdfjs_media_evas_entity_view_2:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  pdfjs_media_evas_service_file:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
 hidden:
   comment: true
   field_image: true

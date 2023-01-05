@@ -4,9 +4,6 @@ status: true
 dependencies:
   module:
     - node
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: bTNRxi4dh4w5KDrXJWN93blJBmstLhL8T8fm4Euy6Bc
 id: node.field_member_of

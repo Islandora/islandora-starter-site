@@ -7,9 +7,6 @@ dependencies:
     - media.type.fits_technical_metadata
   module:
     - file
-  enforced:
-    module:
-      - islandora_fits
 _core:
   default_config_hash: lJ6fDNUm7Radgk9UXOvc_GlwItQQN4SM6D78lzYG_XE
 id: media.fits_technical_metadata.field_media_file

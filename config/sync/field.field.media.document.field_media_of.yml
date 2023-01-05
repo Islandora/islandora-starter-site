@@ -5,9 +5,6 @@ dependencies:
   config:
     - field.storage.media.field_media_of
     - media.type.document
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: hCtesdEi_L52_jy8fXeSz8iof2nR_h6KdIHwHhojtvg
 id: media.document.field_media_of

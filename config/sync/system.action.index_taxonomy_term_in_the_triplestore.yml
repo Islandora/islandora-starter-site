@@ -4,9 +4,6 @@ status: true
 dependencies:
   module:
     - islandora
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: lVY7W4LHB6_HxBHjyDxbIxWYuErh94oFaN3yE9IgtKM
 id: index_taxonomy_term_in_the_triplestore

@@ -30,8 +30,8 @@ conditions:
 reactions:
   derivative:
     id: derivative
+    saved: false
     actions:
       video_generate_a_service_file_from_an_original_file: video_generate_a_service_file_from_an_original_file
       video_generate_a_thumbnail_from_an_original_file: video_generate_a_thumbnail_from_an_original_file
-    saved: false
 weight: -5

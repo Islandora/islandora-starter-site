@@ -4,9 +4,6 @@ status: true
 dependencies:
   module:
     - media
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: jkyI5Z7ljFNPNQJzQZymOHcp88hB_I1qgshMSpVsAkM
 id: media.field_mime_type

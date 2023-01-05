@@ -6,10 +6,6 @@ dependencies:
     - file
     - image
     - media
-  enforced:
-    module:
-      - media
-      - islandora_core_feature
 _core:
   default_config_hash: NslRY6r63iEhkDXbs8n7v_iOBxPqaKhstX1Sb0HA7x0
 id: media.field_media_image
@@ -20,7 +16,7 @@ settings:
   target_type: file
   display_field: false
   display_default: false
-  uri_scheme: fedora
+  uri_scheme: public
   default_image:
     uuid: ''
     alt: ''

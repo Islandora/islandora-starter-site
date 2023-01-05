@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.open_seadragon
+    - field.field.media.image.field_display_mode_for_viewer
     - field.field.media.image.field_file_size
     - field.field.media.image.field_height
     - field.field.media.image.field_media_image
@@ -31,6 +32,7 @@ content:
     region: content
 hidden:
   created: true
+  field_display_mode_for_viewer: true
   field_file_size: true
   field_gemini_uri: true
   field_height: true

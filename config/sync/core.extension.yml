@@ -19,6 +19,7 @@ module:
   contextual: 0
   controlled_access_terms: 0
   controlled_access_terms_defaults: 0
+  csv_serialization: 0
   ctools: 0
   datetime: 0
   dblog: 0
@@ -26,11 +27,13 @@ module:
   editor: 0
   eva: 0
   facets: 0
+  facets_summary: 0
   features: 0
   features_ui: 0
   field: 0
   field_group: 0
   field_permissions: 0
+  field_report: 0
   field_ui: 0
   file: 0
   file_replace: 0
@@ -43,7 +46,9 @@ module:
   history: 0
   image: 0
   islandora: 0
+  islandora_advanced_search: 0
   islandora_audio: 0
+  islandora_breadcrumbs: 0
   islandora_core_feature: 0
   islandora_fits: 0
   islandora_iiif: 0
@@ -51,6 +56,10 @@ module:
   islandora_text_extraction: 0
   islandora_text_extraction_defaults: 0
   islandora_video: 0
+  islandora_workbench_integration: 0
+  jquery_ui: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_menu: 0
   jsonld: 0
   jwt: 0
   key: 0
@@ -85,13 +94,17 @@ module:
   syslog: 0
   system: 0
   taxonomy: 0
+  taxonomy_manager: 0
   text: 0
   token: 0
   toolbar: 0
   tour: 0
   transliterate_filenames: 0
+  twig_tweak: 0
   update: 0
   user: 0
+  view_mode_switch: 0
+  views_data_export: 0
   views_ui: 0
   content_translation: 10
   views: 10

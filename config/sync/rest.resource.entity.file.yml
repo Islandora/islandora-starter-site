@@ -9,9 +9,6 @@ dependencies:
     - jwt
     - serialization
     - user
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: adSrXptX_NpPQC5cFGgYUjjSDncSDxha3towAq-mVzU
 id: entity.file

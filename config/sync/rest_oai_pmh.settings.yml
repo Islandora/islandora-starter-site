@@ -15,10 +15,10 @@ metadata_map_plugins:
     label: oai_dc
     value: dublin_core_rdf
   -
-    label: mods
+    label: oai_raw
     value: ''
   -
-    label: oai_raw
+    label: mods
     value: ''
 cache_technique: liberal_cache
 mods_view:

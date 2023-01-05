@@ -25,9 +25,13 @@ process:
   field_external_uri:
     plugin: urlencode
     source: external_uri
-  field_authority_link:
+  field_authority_link/uri:
     plugin: urlencode
     source: external_uri
+  field_authority_link/title:
+    plugin: urlencode
+    source: external_uri
+  field_authority_link/source: authority_link_source
 destination:
   plugin: 'entity:taxonomy_term'
 migration_dependencies:

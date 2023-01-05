@@ -7,10 +7,11 @@ dependencies:
     - media.type.file
   module:
     - file
-  enforced:
-    module:
-      - media
-      - islandora_core_feature
+    - filehash
+third_party_settings:
+  filehash:
+    dedupe: 0
+    dedupe_original: false
 _core:
   default_config_hash: nvfDHoMQmVfRuyJ3o-0vnC0FIqJAvzYgtteAXWxKkp0
 id: media.file.field_media_file
@@ -27,7 +28,7 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'txt rtf doc docx ppt pptx xls xlsx pdf odf odg odp ods odt fodt fods fodp fodg key numbers pages tiff tif jp2 xml'
+  file_extensions: 'txt rtf doc docx ppt pptx xls xlsx pdf odf odg odp ods odt fodt fods fodp fodg key numbers pages tiff tif jp2 xml zip'
   max_filesize: ''
   description_field: false
 field_type: file

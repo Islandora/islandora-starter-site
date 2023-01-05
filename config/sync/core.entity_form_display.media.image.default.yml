@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_display_mode_for_viewer
     - field.field.media.image.field_file_size
     - field.field.media.image.field_height
     - field.field.media.image.field_media_image
@@ -16,6 +17,7 @@ dependencies:
   module:
     - image
     - path
+    - view_mode_switch
 _core:
   default_config_hash: 0m1---KA1hTxMlNoqo1kI1ZG5TBbGQy4sQ1rOMy9Ovg
 id: media.image.default
@@ -26,6 +28,12 @@ content:
   created:
     type: datetime_timestamp
     weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_display_mode_for_viewer:
+    type: view_mode_switch
+    weight: 27
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,24 @@
+uuid: 0b47ce79-4085-4f3a-9ec5-390a71b96231
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.open_seadragon
+    - field.storage.media.field_display_mode_for_viewer
+    - media.type.image
+  module:
+    - view_mode_switch
+id: media.image.field_display_mode_for_viewer
+field_name: field_display_mode_for_viewer
+entity_type: media
+bundle: image
+label: 'Display Mode for Viewer'
+description: 'If this media should be displayed in an alternate viewer than what''s configured in the "Source" view mode, select it here.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_view_modes:
+    open_seadragon: open_seadragon
+field_type: view_mode_switch

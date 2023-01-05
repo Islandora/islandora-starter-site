@@ -9,7 +9,7 @@ _core:
 label: 'Taxonomy Terms'
 name: taxonomy_terms
 group: Indexing
-description: 'All taxonomy terms'
+description: 'Index all taxonomy terms in Fedora and Blazegraph'
 requireAllConditions: false
 disabled: false
 conditions:
@@ -23,14 +23,14 @@ conditions:
 reactions:
   index:
     id: index
+    saved: false
     actions:
       index_taxonomy_term_in_fedora: index_taxonomy_term_in_fedora
       index_taxonomy_term_in_the_triplestore: index_taxonomy_term_in_the_triplestore
-    saved: false
   delete:
     id: delete
+    saved: false
     actions:
       delete_taxonomy_term_in_fedora: delete_taxonomy_term_in_fedora
       delete_taxonomy_term_in_triplestore: delete_taxonomy_term_in_triplestore
-    saved: false
 weight: -4

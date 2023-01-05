@@ -1,0 +1,5 @@
+search_query_parameter: a
+search_recursive_parameter: r
+search_add_operator: +
+search_remove_operator: '-'
+facet_truncate: '32'

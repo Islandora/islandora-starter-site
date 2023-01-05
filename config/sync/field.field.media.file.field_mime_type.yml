@@ -5,9 +5,6 @@ dependencies:
   config:
     - field.storage.media.field_mime_type
     - media.type.file
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: M4fmG1BYu2hErFm9UvXV5zAhBgtiExjztr-UwaO6EBQ
 id: media.file.field_mime_type

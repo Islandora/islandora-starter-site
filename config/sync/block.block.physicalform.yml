@@ -14,7 +14,7 @@ _core:
 id: physicalform
 theme: olivero
 region: sidebar
-weight: 0
+weight: -7
 provider: null
 plugin: 'facet_block:physical_form'
 settings:

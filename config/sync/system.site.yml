@@ -2,13 +2,13 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
 uuid: 86955ff9-1be3-40ad-84ae-414c65ae901c
-name: 'Islandora 8'
+name: 'Islandora 2 Starter Site'
 mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /collections
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

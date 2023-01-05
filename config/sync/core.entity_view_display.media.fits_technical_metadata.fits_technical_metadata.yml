@@ -17,9 +17,6 @@ dependencies:
     - image
     - islandora_fits
     - user
-  enforced:
-    module:
-      - islandora_fits
 _core:
   default_config_hash: 26WttTG6uQXIDjcL50RF8WEpTDsIDtDaUjZDd0AwBAg
 id: media.fits_technical_metadata.fits_technical_metadata

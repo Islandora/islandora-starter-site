@@ -14,7 +14,7 @@ _core:
 id: subjectname
 theme: olivero
 region: sidebar
-weight: 0
+weight: -5
 provider: null
 plugin: 'facet_block:subject_name'
 settings:

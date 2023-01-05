@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.source
+    - field.field.media.document.field_display_mode_for_viewer
     - field.field.media.document.field_file_size
     - field.field.media.document.field_media_document
     - field.field.media.document.field_media_of
@@ -13,9 +14,6 @@ dependencies:
     - media.type.document
   module:
     - file
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: 7dZMpQQwFR4OCRiqsp83SE85Nmq_SgDsgdIOMXpNxmI
 id: media.document.source
@@ -33,6 +31,7 @@ content:
     region: content
 hidden:
   created: true
+  field_display_mode_for_viewer: true
   field_file_size: true
   field_gemini_uri: true
   field_media_of: true

@@ -7,9 +7,6 @@ dependencies:
     - media.type.audio
   module:
     - file
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: Dxz-WEngY38KoRu0t1OD9c63Yysfs3GDAf2wndSH408
 id: media.audio.field_media_audio_file

@@ -6,9 +6,6 @@ dependencies:
     - media.type.file
   module:
     - media
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: n7qJeyv424_VOyk_EeG-ITh6SCiGLgKhUOcwDXIv3H0
 id: media.file

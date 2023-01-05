@@ -10,7 +10,7 @@ _core:
 id: all_taxonomy_terms
 label: 'All Taxonomy Terms'
 module: views
-description: ''
+description: 'Not sure if used? See new Taxonomy Terms view.'
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid

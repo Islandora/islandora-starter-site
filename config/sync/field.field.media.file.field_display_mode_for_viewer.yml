@@ -1,0 +1,26 @@
+uuid: 5b49a51e-6054-4f2a-a8e2-c19044df2473
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.open_seadragon
+    - core.entity_view_mode.media.pdfjs
+    - field.storage.media.field_display_mode_for_viewer
+    - media.type.file
+  module:
+    - view_mode_switch
+id: media.file.field_display_mode_for_viewer
+field_name: field_display_mode_for_viewer
+entity_type: media
+bundle: file
+label: 'Display Mode for Viewer'
+description: 'If this media should be displayed in an alternate viewer, select it here.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_view_modes:
+    open_seadragon: open_seadragon
+    pdfjs: pdfjs
+field_type: view_mode_switch

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.document.field_display_mode_for_viewer
     - field.field.media.document.field_file_size
     - field.field.media.document.field_media_document
     - field.field.media.document.field_media_of
@@ -70,7 +71,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 6
     region: content
   name:
     type: string
@@ -82,6 +83,7 @@ content:
     region: content
 hidden:
   created: true
+  field_display_mode_for_viewer: true
   langcode: true
   search_api_excerpt: true
   thumbnail: true

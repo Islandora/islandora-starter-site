@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.islandora_object.field_date_valid
     - field.field.node.islandora_object.field_description
     - field.field.node.islandora_object.field_dewey_classification
-    - field.field.node.islandora_object.field_display_hints
     - field.field.node.islandora_object.field_edition
     - field.field.node.islandora_object.field_edtf_date
     - field.field.node.islandora_object.field_edtf_date_created
@@ -60,10 +59,25 @@ targetEntityType: node
 bundle: islandora_object
 mode: default
 content:
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  display_media_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 43
+    region: content
   display_media_service_file:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_abstract:
     type: text_default
@@ -111,6 +125,7 @@ content:
       date_order: big_endian
       month_format: mm
       day_format: dd
+      year_format: 'y'
     third_party_settings: {  }
     weight: 11
     region: content
@@ -122,6 +137,7 @@ content:
       date_order: big_endian
       month_format: mm
       day_format: dd
+      year_format: 'y'
     third_party_settings: {  }
     weight: 13
     region: content
@@ -133,6 +149,7 @@ content:
       date_order: big_endian
       month_format: mm
       day_format: dd
+      year_format: 'y'
     third_party_settings: {  }
     weight: 14
     region: content
@@ -144,6 +161,7 @@ content:
       date_order: big_endian
       month_format: mm
       day_format: dd
+      year_format: 'y'
     third_party_settings: {  }
     weight: 12
     region: content
@@ -178,8 +196,9 @@ content:
       date_order: big_endian
       month_format: mm
       day_format: dd
+      year_format: 'y'
     third_party_settings: {  }
-    weight: 10
+    weight: 9
     region: content
   field_edtf_date_created:
     type: edtf_default
@@ -189,8 +208,9 @@ content:
       date_order: big_endian
       month_format: mm
       day_format: dd
+      year_format: 'y'
     third_party_settings: {  }
-    weight: 9
+    weight: 8
     region: content
   field_edtf_date_issued:
     type: edtf_default
@@ -200,8 +220,9 @@ content:
       date_order: big_endian
       month_format: mm
       day_format: dd
+      year_format: 'y'
     third_party_settings: {  }
-    weight: 8
+    weight: 7
     region: content
   field_extent:
     type: string
@@ -225,6 +246,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_gemini_uri:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 42
     region: content
   field_genre:
     type: entity_reference_label
@@ -280,7 +306,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_local_identifier:
     type: string
@@ -335,7 +361,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    weight: 6
     region: content
   field_resource_type:
     type: entity_reference_label
@@ -395,14 +421,16 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 10
+    region: content
+  search_within_this_collection_link_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
-  display_media_entity_view_1: true
-  display_media_entity_view_2: true
+  display_media_entity_view_3: true
   display_media_thumbnail: true
-  field_display_hints: true
-  field_gemini_uri: true
   field_model: true
   field_pid: true
   field_place_published_country: true

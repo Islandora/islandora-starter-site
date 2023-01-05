@@ -11,9 +11,6 @@ dependencies:
     - rest
     - serialization
     - user
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: ulZTEi1E-dZLYvDO8Dz2WPOTVb-e3D4Qsl89px1PaSk
 id: media_of

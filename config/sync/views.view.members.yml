@@ -7,9 +7,6 @@ dependencies:
   module:
     - node
     - user
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: ATR84UMbnx8nK3zGApyME_LIDQSYk2-WTjP3_iEfTM0
 id: members
@@ -26,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Children
+      title: ''
       fields:
         title:
           id: title
@@ -206,11 +203,11 @@ display:
             group_items: {  }
       filter_groups:
         operator: AND
-        groups: {  }
+        groups:
+          1: AND
       style:
         type: default
         options:
-          grouping: {  }
           row_class: ''
           default_row_class: true
           uses_fields: false
@@ -224,13 +221,37 @@ display:
         options:
           query_comment: ''
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<p> Here is a listing of the members, or "children," of this collection. This is a Drupal view, which means it can be modified to flexibly display these collection items in a variety of ways. Editing this view will change the way all collections appear. You can also clone and set up collection-specific member views, although this will increase the complexity of maintaining your views.</p>'
+            format: basic_html
+          tokenize: false
       footer: {  }
-      display_extenders: {  }
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
     cache_metadata:
       max-age: -1
       contexts:
@@ -247,7 +268,18 @@ display:
     display_plugin: block
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
     cache_metadata:
       max-age: -1
       contexts:

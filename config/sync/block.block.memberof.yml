@@ -1,0 +1,55 @@
+uuid: f95e8560-b5ad-42ed-a88c-e14d445d7bf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.member_of
+  module:
+    - context
+    - facets
+    - islandora
+    - system
+  theme:
+    - olivero
+id: memberof
+theme: olivero
+region: sidebar
+weight: -9
+provider: null
+plugin: 'facet_block:member_of'
+settings:
+  id: 'facet_block:member_of'
+  label: 'Member of'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: memberof
+visibility:
+  context:
+    id: context
+    negate: null
+    values: ''
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: /solr-search/content

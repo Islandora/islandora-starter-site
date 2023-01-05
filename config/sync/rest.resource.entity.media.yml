@@ -9,9 +9,6 @@ dependencies:
     - media
     - serialization
     - user
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: t5fUWKfF1wCsP_kc8DZwfoPHS-Vo8tK8nBZ33aQdFlA
 id: entity.media

@@ -9,7 +9,7 @@ _core:
 id: olivero_primary_admin_actions
 theme: olivero
 region: highlighted
-weight: -5
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

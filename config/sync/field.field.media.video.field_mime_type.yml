@@ -4,10 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_mime_type
-    - media.type.video
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: _cHp1IxgQg4nx6340EAIT6PiCRpSgiEY3It5PRK6SCY
 id: media.video.field_mime_type

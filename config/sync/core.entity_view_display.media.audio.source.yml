@@ -14,9 +14,6 @@ dependencies:
     - media.type.audio
   module:
     - islandora_audio
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: WkacGkCcx7wkdncVI8sq5snOYKKAD2URkVHjFnqsXHE
 id: media.audio.source
@@ -34,9 +31,9 @@ content:
     label: visually_hidden
     settings:
       controls: true
-      multiple_file_display_type: tags
       autoplay: false
       loop: false
+      multiple_file_display_type: tags
     third_party_settings: {  }
     weight: 0
     region: content

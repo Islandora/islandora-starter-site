@@ -12,7 +12,7 @@ _core:
 label: Collection
 name: collection
 group: Display
-description: 'Display block of children'
+description: 'If a Collection or Compound, display a block of children'
 requireAllConditions: false
 disabled: false
 conditions:
@@ -21,26 +21,29 @@ conditions:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
-    uri: 'http://purl.org/dc/dcmitype/Collection'
-    logic: and
+    uri: 'http://purl.org/dc/dcmitype/Collection,http://vocab.getty.edu/aat/300242735'
+    logic: or
 reactions:
   blocks:
     id: blocks
     blocks:
-      41f1d520-14ae-479e-90d2-34aa6f4a750e:
+      71991e2c-74a8-4200-b085-2bf6e6d0a046:
+        uuid: 71991e2c-74a8-4200-b085-2bf6e6d0a046
         id: 'views_block:members-block_1'
         label: ''
         provider: views
         label_display: visible
-        region: content_suffix
+        region: content
         weight: '0'
-        theme: bartik
+        custom_id: views_block_members_block_1
+        theme: olivero
         css_class: ''
         unique: 0
         context_id: collection
         context_mapping: {  }
         views_label: ''
         items_per_page: none
+        third_party_settings: {  }
     include_default_blocks: 1
     saved: false
 weight: 1

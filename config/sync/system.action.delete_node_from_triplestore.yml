@@ -4,9 +4,6 @@ status: true
 dependencies:
   module:
     - islandora
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: 5BLRdR-RanhNKAu8gdFGrgqjy3etFaQ1xMXYKH05W38
 id: delete_node_from_triplestore

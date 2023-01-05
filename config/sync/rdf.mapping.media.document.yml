@@ -6,9 +6,6 @@ dependencies:
     - media.type.document
   module:
     - media
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: qRAVuCEff49i3-EnfTLObQFU_aGAFbdOPpBXZwdGYvk
 id: media.document

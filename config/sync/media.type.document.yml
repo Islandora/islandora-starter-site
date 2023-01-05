@@ -1,10 +1,6 @@
 uuid: f3a7bd28-2d40-4456-bbd9-e5634e5da0ef
 langcode: en
 status: true
-dependencies:
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: wpcgALGAQfGhCw7pgdQSZxjlBOoRFL_RDDYQhy7djFk
 id: document

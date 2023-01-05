@@ -1,14 +1,12 @@
-vid,name,description,external_uri
-islandora_display,"Open Seadragon","Display using the Open Seadragon viewer",http://openseadragon.github.io
-islandora_display,"PDFjs","Display using the PDF.js viewer",http://mozilla.github.io/pdf.js
-resource_types,"Collection","An aggregation of resources",http://purl.org/ontology/bibo/Collection
-resource_types,"Dataset","Data encoded in a defined structure",http://purl.org/dc/dcmitype/Dataset
-resource_types,"Image","A visual representation other than text",http://purl.org/dc/dcmitype/Image
-resource_types,"Interactive Resource","A resource requiring interaction from the user to be understood, executed, or experienced",http://purl.org/dc/dcmitype/InteractiveResource
-resource_types,"Moving Image","A series of visual representations imparting an impression of motion when shown in succession",http://purl.org/dc/dcmitype/MovingImage
-resource_types,"Physical Object","An inanimate, three-dimensional object or substance",http://purl.org/dc/dcmitype/PhysicalObject
-resource_types,"Service","A system that provides one or more functions",http://purl.org/dc/dcmitype/Service
-resource_types,"Sound","A resource primarily intended to be heard",http://purl.org/dc/dcmitype/Sound
-resource_types,"Still Image","A static visual representation",http://purl.org/dc/dcmitype/StillImage
-resource_types,"Software","A computer program in source or compiled form",http://purl.org/dc/dcmitype/Software
-resource_types,"Text","A resource consisting primarily of words for reading",http://purl.org/dc/dcmitype/Text
+vid,name,description,external_uri,authority_link_source
+resource_types,"Collection","An aggregation of resources",http://purl.org/ontology/bibo/Collection,bibo
+resource_types,"Dataset","Data encoded in a defined structure",http://purl.org/dc/dcmitype/Dataset,dcmi_types
+resource_types,"Image","A visual representation other than text",http://purl.org/dc/dcmitype/Image,dcmi_types
+resource_types,"Interactive Resource","A resource requiring interaction from the user to be understood, executed, or experienced",http://purl.org/dc/dcmitype/InteractiveResource,dcmi_types
+resource_types,"Moving Image","A series of visual representations imparting an impression of motion when shown in succession",http://purl.org/dc/dcmitype/MovingImage,dcmi_types
+resource_types,"Physical Object","An inanimate, three-dimensional object or substance",http://purl.org/dc/dcmitype/PhysicalObject,dcmi_types
+resource_types,"Service","A system that provides one or more functions",http://purl.org/dc/dcmitype/Service,dcmi_types
+resource_types,"Sound","A resource primarily intended to be heard",http://purl.org/dc/dcmitype/Sound,dcmi_types
+resource_types,"Still Image","A static visual representation",http://purl.org/dc/dcmitype/StillImage,dcmi_types
+resource_types,"Software","A computer program in source or compiled form",http://purl.org/dc/dcmitype/Software,dcmi_types
+resource_types,"Text","A resource consisting primarily of words for reading",http://purl.org/dc/dcmitype/Text,dcmi_types

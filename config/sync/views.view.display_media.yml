@@ -3,15 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.file_download
     - core.entity_view_mode.media.source
+    - core.entity_view_mode.media.thumbnail
   module:
     - eva
     - media
     - taxonomy
     - user
-  enforced:
-    module:
-      - islandora_core_feature
 _core:
   default_config_hash: Mzu_nG5xgemY4WYAkhXc6KeebGBvFbmXkM0v5nyK8sE
 id: display_media
@@ -254,11 +253,35 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:media'
+        options:
+          relationship: none
+          view_mode: file_download
       defaults:
+        style: false
+        row: false
         filters: false
         filter_groups: false
       display_description: 'Best quality representation of the Object appropriate for long-term preservation.'
-      display_extenders: {  }
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
       entity_type: node
       bundles: {  }
       show_title: false
@@ -272,8 +295,113 @@ display:
         - url
         - user.permissions
       tags: {  }
-  entity_view_2:
-    id: entity_view_2
+  entity_view_3:
+    id: entity_view_3
+    display_title: 'Thumbnail - Small'
+    display_plugin: entity_view
+    position: 1
+    display_options:
+      title: Thumbnail
+      filters:
+        status:
+          id: status
+          table: media_field_data
+          field: status
+          entity_type: media
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        field_external_uri_uri:
+          id: field_external_uri_uri
+          table: taxonomy_term__field_external_uri
+          field: field_external_uri_uri
+          relationship: field_media_use
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: '='
+          value: 'http://pcdm.org/use#ThumbnailImage'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:media'
+        options:
+          relationship: none
+          view_mode: thumbnail
+      defaults:
+        title: false
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+      display_description: 'The thumbnail file, formatted small.'
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      entity_type: node
+      bundles: {  }
+      show_title: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user.permissions
+      tags: {  }
+  original_download:
+    id: original_download
     display_title: 'Original File - Download'
     display_plugin: entity_view
     position: 1
@@ -336,11 +464,37 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:media'
+        options:
+          relationship: none
+          view_mode: file_download
       defaults:
+        show_admin_links: false
+        style: false
+        row: false
         filters: false
         filter_groups: false
       display_description: 'The original creation format of a file'
-      display_extenders: {  }
+      show_admin_links: false
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
       entity_type: node
       bundles: {  }
       show_title: false
@@ -504,7 +658,18 @@ display:
         filters: false
         filter_groups: false
       display_description: 'A low resolution image representation of the Object appropriate for using as an icon.'
-      display_extenders: {  }
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
       entity_type: node
       bundles: {  }
       show_title: false
